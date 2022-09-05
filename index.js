@@ -33,12 +33,18 @@ function restockIceCream(qty = 1) {
   };
 }
 
-const initialState = {
+// const initialState = {
+//   numOfCakes: 10,
+//   numOfIceCream: 20,
+// };
+
+const initialCakeState = {
   numOfCakes: 10,
+};
+const initialIceCreamState = {
   numOfIceCream: 20,
 };
-
-const reducer = (state = initialState, action) => {
+const cakeReducer = (state = initialCakeState, action) => {
   switch (action.type) {
     case CAKE_ORDERED:
       return {
@@ -50,6 +56,13 @@ const reducer = (state = initialState, action) => {
         ...state,
         numOfCakes: state.numOfCakes + action.payload,
       };
+    default:
+      return state;
+  }
+};
+
+const iceCreamReducer = (state = initialIceCreamState, action) => {
+  switch (action.type) {
     case ICECREAM_ORDERED:
       return {
         ...state,
