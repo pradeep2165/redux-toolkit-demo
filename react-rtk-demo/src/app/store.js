@@ -5,7 +5,7 @@ import cakeReducer from "../features/cake/cakeSlice";
 import iceCreamReducer from "../features/icecream/iceCreamSlice";
 import userReducer from "../features/user/userSlice";
 
-const logger = reduxLogger.createLogger();
+// const logger = reduxLogger.createLogger();
 const store = configureStore({
   reducer: {
     cake: cakeReducer,

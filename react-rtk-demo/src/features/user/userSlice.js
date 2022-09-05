@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from axios;
+import axios from "axios";
 
 const initialState = {
   loading: false,
@@ -33,4 +33,3 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-
